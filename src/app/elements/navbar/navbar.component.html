@@ -1,0 +1,72 @@
+<div class="animated-background">
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+</div>
+
+<!-- Main Content -->
+<div class="container">
+    <!-- Header Section -->
+    <!-- <header class="header">
+        <div class="logo">Hein Thiri Htun</div>
+        <nav class="nav">
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#about">Services</a></li>
+                <li><a href="#about">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header> -->
+    <header class="header">
+        <div class="logo">Hein Thiri Htun</div>
+        <nav class="nav">
+          <div class="nav-toggle" (click)="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-links" [class.show]="menuOpen">
+            <!-- <li><a href="#home" (click)="closeMenu()" class="active">Home</a></li>
+            <li><a href="#about" (click)="closeMenu()">About</a></li>
+            <li><a href="#services" (click)="closeMenu()">Services</a></li>
+            <li><a href="#projects" (click)="closeMenu()">Projects</a></li>
+            <li><a href="#contact" (click)="closeMenu()">Contact</a></li> -->
+            <li>
+              <a href="#home"
+                 [ngClass]="{ 'active': currentSection === 'home' }"
+                 (click)="setActive('home')">Home</a>
+            </li>
+            <li>
+              <a href="#about"
+                 [ngClass]="{ 'active': currentSection === 'about' }"
+                 (click)="setActive('about')">About</a>
+            </li>
+            <li>
+              <a href="#services"
+                 [ngClass]="{ 'active': currentSection === 'services' }"
+                 (click)="setActive('services')">Services</a>
+            </li>
+            <li>
+              <a href="#projects"
+                 [ngClass]="{ 'active': currentSection === 'projects' }"
+                 (click)="setActive('projects')">Projects</a>
+            </li>
+            <li>
+              <a href="#contact"
+                 [ngClass]="{ 'active': currentSection === 'contact' }"
+                 (click)="setActive('contact')">Contact</a>
+            </li>
+            
+          </ul>
+        </nav>
+      </header>
+      
