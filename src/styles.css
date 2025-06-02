@@ -1,1 +1,100 @@
 /* You can add global styles to this file, and also import other style files */
+/* styles.scss */
+
+
+:root {
+    --primary: #6C63FF;
+    --secondary: #FF6B6B;
+    --background: #0F172A;
+    --surface: #1E293B;
+    --text: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --transition: all 0.3s ease;
+    --main-color: #a800a8;
+    --black100: #f7f7f7;
+    --black400: #555555;
+    --black900: #000000;
+    --white: #ffffff;
+
+    --shadow-black100: 0 5px 15px rgba(0, 0, 0, .1);
+    --shadow-black300: 0 5px 15px rgba(0, 0, 0, .3);
+    --black-alpha100: 0 5px 15px rgba(0, 0, 0, .05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #222;
+    background-color: var(--background);
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+
+    .btn-1:hover { color: var(--main-color); background-color: var(--white); }
+
+    .btn-2 {
+        background-color: var(--white);
+        padding: 15px 40px;
+        border: none;
+        border-radius: 30px;
+        color: var(--main-color);
+        font-size: 16px;
+        text-transform: capitalize;
+        box-shadow: var(--shadow-black100);
+        font-weight: 500;
+        transition: all .5s ease;
+    }
+        
+        .btn-2:hover { color: var(--white); background-color: var(--main-color); }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+.section-padding { padding: 30px 0; }
+.section-title { margin-bottom: 60px; }
+    .section-title h4 {
+        font-size: 25px;
+        font-weight: 700;
+        color: var(--black900);
+        text-transform: capitalize;
+        text-align: center;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+        color: var(--black900);
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0; 
+        text-align: center; 
+    }
+
+        .section-title h2 span { color: var(--main-color); }
+
+.owl-carousel .owl-dots { padding: 0 15px; text-align: center; margin-top: 20px; }
+
+.owl-carousel button.owl-dot {
+    height: 6px;
+    width: 24px;
+    background-color: #dddddd;
+    display: inline-block;
+    margin: 0 4px;
+    border-radius: 5px;
+}
+
+    .owl-carousel button.owl-dot.active { background-color: var(--main-color); }
+    @media (max-width: 768x) {
+        .home-img{
+            margin-top: 34px !important;
+        }
+    }
